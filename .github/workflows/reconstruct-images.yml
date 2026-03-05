@@ -1,0 +1,270 @@
+name: Reconstruct Images from Base64 Chunks
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - 'image-chunks/**'
+  workflow_dispatch:
+
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Reconstruct images
+        run: |
+          # Reconstruct hero-hk-skyline.jpg
+          if ls image-chunks/hero-hk-skyline/chunk_00.txt 2>/dev/null; then
+            cat image-chunks/hero-hk-skyline/chunk_00.txt \
+              image-chunks/hero-hk-skyline/chunk_01.txt \
+              image-chunks/hero-hk-skyline/chunk_02.txt \
+              image-chunks/hero-hk-skyline/chunk_03.txt \
+              image-chunks/hero-hk-skyline/chunk_04.txt \
+              image-chunks/hero-hk-skyline/chunk_05.txt \
+              image-chunks/hero-hk-skyline/chunk_06.txt \
+              image-chunks/hero-hk-skyline/chunk_07.txt \
+              image-chunks/hero-hk-skyline/chunk_08.txt \
+              image-chunks/hero-hk-skyline/chunk_09.txt \
+              image-chunks/hero-hk-skyline/chunk_10.txt \
+              image-chunks/hero-hk-skyline/chunk_11.txt \
+              image-chunks/hero-hk-skyline/chunk_12.txt \
+              image-chunks/hero-hk-skyline/chunk_13.txt \
+              image-chunks/hero-hk-skyline/chunk_14.txt \
+              image-chunks/hero-hk-skyline/chunk_15.txt \
+              image-chunks/hero-hk-skyline/chunk_16.txt \
+              image-chunks/hero-hk-skyline/chunk_17.txt \
+              image-chunks/hero-hk-skyline/chunk_18.txt \
+              image-chunks/hero-hk-skyline/chunk_19.txt \
+              image-chunks/hero-hk-skyline/chunk_20.txt \
+              image-chunks/hero-hk-skyline/chunk_21.txt \
+              image-chunks/hero-hk-skyline/chunk_22.txt \
+              image-chunks/hero-hk-skyline/chunk_23.txt \
+              image-chunks/hero-hk-skyline/chunk_24.txt \
+              image-chunks/hero-hk-skyline/chunk_25.txt \
+              image-chunks/hero-hk-skyline/chunk_26.txt \
+              image-chunks/hero-hk-skyline/chunk_27.txt \
+              image-chunks/hero-hk-skyline/chunk_28.txt \
+              image-chunks/hero-hk-skyline/chunk_29.txt \
+              image-chunks/hero-hk-skyline/chunk_30.txt \
+              image-chunks/hero-hk-skyline/chunk_31.txt \
+              image-chunks/hero-hk-skyline/chunk_32.txt \
+              image-chunks/hero-hk-skyline/chunk_33.txt \
+              image-chunks/hero-hk-skyline/chunk_34.txt \
+              image-chunks/hero-hk-skyline/chunk_35.txt \
+              image-chunks/hero-hk-skyline/chunk_36.txt \
+              image-chunks/hero-hk-skyline/chunk_37.txt \
+              image-chunks/hero-hk-skyline/chunk_38.txt \
+              image-chunks/hero-hk-skyline/chunk_39.txt \
+              image-chunks/hero-hk-skyline/chunk_40.txt \
+              image-chunks/hero-hk-skyline/chunk_41.txt \
+              image-chunks/hero-hk-skyline/chunk_42.txt \
+              image-chunks/hero-hk-skyline/chunk_43.txt \
+              image-chunks/hero-hk-skyline/chunk_44.txt \
+              image-chunks/hero-hk-skyline/chunk_45.txt \
+              image-chunks/hero-hk-skyline/chunk_46.txt \
+              image-chunks/hero-hk-skyline/chunk_47.txt \
+              image-chunks/hero-hk-skyline/chunk_48.txt \
+              image-chunks/hero-hk-skyline/chunk_49.txt \
+              image-chunks/hero-hk-skyline/chunk_50.txt \
+              image-chunks/hero-hk-skyline/chunk_51.txt \
+              image-chunks/hero-hk-skyline/chunk_52.txt \
+              image-chunks/hero-hk-skyline/chunk_53.txt \
+              image-chunks/hero-hk-skyline/chunk_54.txt \
+              image-chunks/hero-hk-skyline/chunk_55.txt \
+              image-chunks/hero-hk-skyline/chunk_56.txt \
+              image-chunks/hero-hk-skyline/chunk_57.txt \
+              image-chunks/hero-hk-skyline/chunk_58.txt \
+              image-chunks/hero-hk-skyline/chunk_59.txt \
+              image-chunks/hero-hk-skyline/chunk_60.txt \
+              image-chunks/hero-hk-skyline/chunk_61.txt \
+              image-chunks/hero-hk-skyline/chunk_62.txt \
+              image-chunks/hero-hk-skyline/chunk_63.txt \
+              image-chunks/hero-hk-skyline/chunk_64.txt \
+              image-chunks/hero-hk-skyline/chunk_65.txt \
+              image-chunks/hero-hk-skyline/chunk_66.txt \
+              image-chunks/hero-hk-skyline/chunk_67.txt \
+              image-chunks/hero-hk-skyline/chunk_68.txt \
+              image-chunks/hero-hk-skyline/chunk_69.txt > /tmp/hero-hk-skyline.b64
+            base64 -d /tmp/hero-hk-skyline.b64 > images/hero-hk-skyline.jpg
+            echo "Reconstructed hero-hk-skyline.jpg:  bytes"
+          fi
+
+          # Reconstruct hk-harbour-night.jpg
+          if ls image-chunks/hk-harbour-night/chunk_00.txt 2>/dev/null; then
+            cat image-chunks/hk-harbour-night/chunk_00.txt \
+              image-chunks/hk-harbour-night/chunk_01.txt \
+              image-chunks/hk-harbour-night/chunk_02.txt \
+              image-chunks/hk-harbour-night/chunk_03.txt \
+              image-chunks/hk-harbour-night/chunk_04.txt \
+              image-chunks/hk-harbour-night/chunk_05.txt \
+              image-chunks/hk-harbour-night/chunk_06.txt \
+              image-chunks/hk-harbour-night/chunk_07.txt \
+              image-chunks/hk-harbour-night/chunk_08.txt \
+              image-chunks/hk-harbour-night/chunk_09.txt \
+              image-chunks/hk-harbour-night/chunk_10.txt \
+              image-chunks/hk-harbour-night/chunk_11.txt \
+              image-chunks/hk-harbour-night/chunk_12.txt \
+              image-chunks/hk-harbour-night/chunk_13.txt \
+              image-chunks/hk-harbour-night/chunk_14.txt \
+              image-chunks/hk-harbour-night/chunk_15.txt \
+              image-chunks/hk-harbour-night/chunk_16.txt \
+              image-chunks/hk-harbour-night/chunk_17.txt \
+              image-chunks/hk-harbour-night/chunk_18.txt \
+              image-chunks/hk-harbour-night/chunk_19.txt \
+              image-chunks/hk-harbour-night/chunk_20.txt \
+              image-chunks/hk-harbour-night/chunk_21.txt \
+              image-chunks/hk-harbour-night/chunk_22.txt \
+              image-chunks/hk-harbour-night/chunk_23.txt \
+              image-chunks/hk-harbour-night/chunk_24.txt \
+              image-chunks/hk-harbour-night/chunk_25.txt \
+              image-chunks/hk-harbour-night/chunk_26.txt \
+              image-chunks/hk-harbour-night/chunk_27.txt \
+              image-chunks/hk-harbour-night/chunk_28.txt \
+              image-chunks/hk-harbour-night/chunk_29.txt \
+              image-chunks/hk-harbour-night/chunk_30.txt \
+              image-chunks/hk-harbour-night/chunk_31.txt \
+              image-chunks/hk-harbour-night/chunk_32.txt \
+              image-chunks/hk-harbour-night/chunk_33.txt \
+              image-chunks/hk-harbour-night/chunk_34.txt \
+              image-chunks/hk-harbour-night/chunk_35.txt \
+              image-chunks/hk-harbour-night/chunk_36.txt \
+              image-chunks/hk-harbour-night/chunk_37.txt \
+              image-chunks/hk-harbour-night/chunk_38.txt \
+              image-chunks/hk-harbour-night/chunk_39.txt \
+              image-chunks/hk-harbour-night/chunk_40.txt \
+              image-chunks/hk-harbour-night/chunk_41.txt \
+              image-chunks/hk-harbour-night/chunk_42.txt \
+              image-chunks/hk-harbour-night/chunk_43.txt \
+              image-chunks/hk-harbour-night/chunk_44.txt \
+              image-chunks/hk-harbour-night/chunk_45.txt \
+              image-chunks/hk-harbour-night/chunk_46.txt \
+              image-chunks/hk-harbour-night/chunk_47.txt \
+              image-chunks/hk-harbour-night/chunk_48.txt \
+              image-chunks/hk-harbour-night/chunk_49.txt \
+              image-chunks/hk-harbour-night/chunk_50.txt \
+              image-chunks/hk-harbour-night/chunk_51.txt \
+              image-chunks/hk-harbour-night/chunk_52.txt \
+              image-chunks/hk-harbour-night/chunk_53.txt \
+              image-chunks/hk-harbour-night/chunk_54.txt \
+              image-chunks/hk-harbour-night/chunk_55.txt \
+              image-chunks/hk-harbour-night/chunk_56.txt \
+              image-chunks/hk-harbour-night/chunk_57.txt \
+              image-chunks/hk-harbour-night/chunk_58.txt \
+              image-chunks/hk-harbour-night/chunk_59.txt \
+              image-chunks/hk-harbour-night/chunk_60.txt \
+              image-chunks/hk-harbour-night/chunk_61.txt \
+              image-chunks/hk-harbour-night/chunk_62.txt \
+              image-chunks/hk-harbour-night/chunk_63.txt \
+              image-chunks/hk-harbour-night/chunk_64.txt \
+              image-chunks/hk-harbour-night/chunk_65.txt \
+              image-chunks/hk-harbour-night/chunk_66.txt \
+              image-chunks/hk-harbour-night/chunk_67.txt \
+              image-chunks/hk-harbour-night/chunk_68.txt \
+              image-chunks/hk-harbour-night/chunk_69.txt \
+              image-chunks/hk-harbour-night/chunk_70.txt \
+              image-chunks/hk-harbour-night/chunk_71.txt > /tmp/hk-harbour-night.b64
+            base64 -d /tmp/hk-harbour-night.b64 > images/hk-harbour-night.jpg
+            echo "Reconstructed hk-harbour-night.jpg:  bytes"
+          fi
+
+          # Reconstruct office-trading-floor.jpg
+          if ls image-chunks/office-trading-floor/chunk_00.txt 2>/dev/null; then
+            cat image-chunks/office-trading-floor/chunk_00.txt \
+              image-chunks/office-trading-floor/chunk_01.txt \
+              image-chunks/office-trading-floor/chunk_02.txt \
+              image-chunks/office-trading-floor/chunk_03.txt \
+              image-chunks/office-trading-floor/chunk_04.txt \
+              image-chunks/office-trading-floor/chunk_05.txt \
+              image-chunks/office-trading-floor/chunk_06.txt \
+              image-chunks/office-trading-floor/chunk_07.txt \
+              image-chunks/office-trading-floor/chunk_08.txt \
+              image-chunks/office-trading-floor/chunk_09.txt \
+              image-chunks/office-trading-floor/chunk_10.txt \
+              image-chunks/office-trading-floor/chunk_11.txt \
+              image-chunks/office-trading-floor/chunk_12.txt \
+              image-chunks/office-trading-floor/chunk_13.txt \
+              image-chunks/office-trading-floor/chunk_14.txt \
+              image-chunks/office-trading-floor/chunk_15.txt \
+              image-chunks/office-trading-floor/chunk_16.txt \
+              image-chunks/office-trading-floor/chunk_17.txt \
+              image-chunks/office-trading-floor/chunk_18.txt \
+              image-chunks/office-trading-floor/chunk_19.txt \
+              image-chunks/office-trading-floor/chunk_20.txt \
+              image-chunks/office-trading-floor/chunk_21.txt \
+              image-chunks/office-trading-floor/chunk_22.txt \
+              image-chunks/office-trading-floor/chunk_23.txt \
+              image-chunks/office-trading-floor/chunk_24.txt \
+              image-chunks/office-trading-floor/chunk_25.txt \
+              image-chunks/office-trading-floor/chunk_26.txt \
+              image-chunks/office-trading-floor/chunk_27.txt \
+              image-chunks/office-trading-floor/chunk_28.txt \
+              image-chunks/office-trading-floor/chunk_29.txt \
+              image-chunks/office-trading-floor/chunk_30.txt \
+              image-chunks/office-trading-floor/chunk_31.txt \
+              image-chunks/office-trading-floor/chunk_32.txt \
+              image-chunks/office-trading-floor/chunk_33.txt \
+              image-chunks/office-trading-floor/chunk_34.txt > /tmp/office-trading-floor.b64
+            base64 -d /tmp/office-trading-floor.b64 > images/office-trading-floor.jpg
+            echo "Reconstructed office-trading-floor.jpg:  bytes"
+          fi
+
+          # Reconstruct research-reports.jpg
+          if ls image-chunks/research-reports/chunk_00.txt 2>/dev/null; then
+            cat image-chunks/research-reports/chunk_00.txt \
+              image-chunks/research-reports/chunk_01.txt \
+              image-chunks/research-reports/chunk_02.txt \
+              image-chunks/research-reports/chunk_03.txt \
+              image-chunks/research-reports/chunk_04.txt \
+              image-chunks/research-reports/chunk_05.txt \
+              image-chunks/research-reports/chunk_06.txt \
+              image-chunks/research-reports/chunk_07.txt \
+              image-chunks/research-reports/chunk_08.txt \
+              image-chunks/research-reports/chunk_09.txt \
+              image-chunks/research-reports/chunk_10.txt \
+              image-chunks/research-reports/chunk_11.txt \
+              image-chunks/research-reports/chunk_12.txt \
+              image-chunks/research-reports/chunk_13.txt \
+              image-chunks/research-reports/chunk_14.txt \
+              image-chunks/research-reports/chunk_15.txt \
+              image-chunks/research-reports/chunk_16.txt \
+              image-chunks/research-reports/chunk_17.txt \
+              image-chunks/research-reports/chunk_18.txt \
+              image-chunks/research-reports/chunk_19.txt \
+              image-chunks/research-reports/chunk_20.txt \
+              image-chunks/research-reports/chunk_21.txt \
+              image-chunks/research-reports/chunk_22.txt \
+              image-chunks/research-reports/chunk_23.txt \
+              image-chunks/research-reports/chunk_24.txt \
+              image-chunks/research-reports/chunk_25.txt \
+              image-chunks/research-reports/chunk_26.txt \
+              image-chunks/research-reports/chunk_27.txt \
+              image-chunks/research-reports/chunk_28.txt \
+              image-chunks/research-reports/chunk_29.txt \
+              image-chunks/research-reports/chunk_30.txt \
+              image-chunks/research-reports/chunk_31.txt \
+              image-chunks/research-reports/chunk_32.txt \
+              image-chunks/research-reports/chunk_33.txt \
+              image-chunks/research-reports/chunk_34.txt \
+              image-chunks/research-reports/chunk_35.txt \
+              image-chunks/research-reports/chunk_36.txt > /tmp/research-reports.b64
+            base64 -d /tmp/research-reports.b64 > images/research-reports.jpg
+            echo "Reconstructed research-reports.jpg:  bytes"
+          fi
+
+
+      - name: Remove chunk files
+        run: |
+          rm -rf image-chunks/
+          
+      - name: Commit and push reconstructed images
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add images/
+          git rm -r --cached image-chunks/ --ignore-unmatch || true
+          git status
+          git commit -m "Reconstruct images from base64 chunks" || echo "Nothing to commit"
+          git push
