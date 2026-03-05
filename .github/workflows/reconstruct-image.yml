@@ -20,7 +20,8 @@ jobs:
               assets/chunks/chunk_04.txt \
               assets/chunks/chunk_05.txt \
               assets/chunks/chunk_06.txt \
-              assets/chunks/chunk_07.txt \
+              assets/chunks/chunk_07a.txt \
+              assets/chunks/chunk_07b.txt \
               assets/chunks/chunk_08.txt \
               assets/chunks/chunk_09.txt \
               assets/chunks/chunk_10.txt \
