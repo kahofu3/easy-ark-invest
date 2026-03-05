@@ -19,7 +19,8 @@
 <link rel="author" href="https://www.perplexity.ai/computer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us — Easy-Ark Invest</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzFhM2E1YyIvPgo8cGF0aCBkPSJNMTYgNUw5IDE5aDE0TDE2IDV6IiBmaWxsPSIjYjg4NjBiIiBvcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTE2IDVMMTYgMTIiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTMgMTJMMTYgNUwxOSAxMiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+CjxwYXRoIGQ9Ik02IDIyQzYgMjIgMTAgMTggMTYgMThDMjIgMTggMjYgMjIgMjYgMjIiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44Ii8+CjxwYXRoIGQ9Ik04IDI1QzggMjUgMTEgMjIgMTYgMjJDMjEgMjIgMjQgMjUgMjQgMjUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNCIvPgo8L3N2Zz4=">
+<title>About Us — Easy-Ark Invest 易舟投資</title>
 <meta name="description" content="Easy-Ark Invest is a Hong Kong-based SFC-licensed asset management firm focused on Professional Investors, operating LPF structures with alpha capture and proprietary research capabilities.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,11 +37,17 @@
   <div class="header__inner">
     <a href="./index.html" class="header__logo" aria-label="Easy-Ark Invest Home">
       <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <path d="M20 4L6 32h4l10-22 10 22h4L20 4z" fill="currentColor" opacity="0.9"/>
-        <path d="M20 14l-6 13.5h12L20 14z" fill="currentColor" opacity="0.4"/>
-        <rect x="8" y="33" width="24" height="2" rx="1" fill="currentColor" opacity="0.2"/>
+        <!-- Hull / Ark shape -->
+        <path d="M8 28C8 28 13 22 20 22C27 22 32 28 32 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M11 31C11 31 14 27 20 27C26 27 29 31 29 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+        <!-- Sail / Upward arrow -->
+        <path d="M20 6L13 21h14L20 6z" fill="currentColor" opacity="0.85"/>
+        <!-- Arrow tip accent in gold -->
+        <path d="M20 6L16.5 13h7L20 6z" fill="var(--color-gold, #b8860b)" opacity="0.9"/>
+        <!-- Mast line -->
+        <path d="M20 6V24" stroke="currentColor" stroke-width="1.2" opacity="0.3"/>
       </svg>
-      <span class="header__logo-text">Easy-Ark Invest</span>
+      <span class="header__logo-text">Easy-Ark Invest <span style="font-weight:400;opacity:0.7;">易舟投資</span></span>
     </a>
     <div class="header__actions" style="display:flex;align-items:center;gap:var(--space-2);">
       <nav class="header__nav" data-nav aria-label="Main navigation">
@@ -77,6 +84,7 @@
       <div class="reveal">
         <div class="gold-accent" style="margin-bottom: var(--space-4);"></div>
         <h2 id="overview-heading" style="font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-4);">Company Overview</h2>
+        <img src="./images/office-trading-floor.jpg" alt="Modern trading office with multiple screens" class="reveal section-image" loading="lazy" style="border-radius: var(--radius-lg); max-width: 100%; height: auto; margin-bottom: var(--space-6);">
         <p style="font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.8; margin-bottom: var(--space-4);">
           Easy-Ark Invest is a Hong Kong-based asset management firm licensed by the Securities and Futures Commission for Type 4 (Advising on Securities) and Type 9 (Asset Management) regulated activities. We focus exclusively on Professional Investors as defined under the Securities and Futures Ordinance.
         </p>
@@ -86,6 +94,34 @@
         <p style="font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.8;">
           Our licensed representatives actively contribute to leading alpha capture platforms globally, participate in institutional investment programmes and competitions, and publish proprietary research across equities, derivatives, and alternative strategies.
         </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- INVESTMENT TRACK RECORD -->
+  <section class="section" style="background: var(--color-surface-offset);" aria-labelledby="track-record-heading">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <div class="gold-accent" style="margin-bottom: var(--space-4);"></div>
+        <h2 id="track-record-heading" style="font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-6);">Investment Track Record</h2>
+        <div class="track-record-grid">
+          <div class="track-record-item">
+            <div class="track-record-value">Top Quartile</div>
+            <div class="track-record-label">Alpha Capture Win Rate</div>
+            <div class="track-record-desc">Across contributing platforms globally</div>
+          </div>
+          <div class="track-record-item">
+            <div class="track-record-value">50+</div>
+            <div class="track-record-label">Companies Under Active Coverage</div>
+            <div class="track-record-desc">Deep research spanning equities, derivatives, and alternatives</div>
+          </div>
+          <div class="track-record-item">
+            <div class="track-record-value">3</div>
+            <div class="track-record-label">Active LPF Strategies</div>
+            <div class="track-record-desc">Diversified fund strategies under management</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -170,6 +206,7 @@
         <p style="font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.8; margin-bottom: var(--space-4);">
           Our alpha capture track record demonstrates consistent idea generation across market cycles, providing a documented and verifiable measure of our investment insight. This programme serves as both a performance differentiator and a source of proprietary investment intelligence that informs our fund strategies.
         </p>
+        <img src="./images/hk-harbour-night.jpg" alt="Victoria Harbour at night" class="reveal section-image" loading="lazy" style="border-radius: var(--radius-lg); max-width: 100%; height: auto; margin-bottom: var(--space-4);">
         <p style="font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.8;">
           Our licensed representatives also participate in various institutional investment programmes and competitions, further developing and demonstrating their analytical capabilities across diverse market environments.
         </p>
@@ -299,11 +336,17 @@
       <div class="footer__brand">
         <a href="./index.html" class="footer__brand-logo" aria-label="Easy-Ark Invest Home">
           <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M20 4L6 32h4l10-22 10 22h4L20 4z" fill="currentColor" opacity="0.9"/>
-            <path d="M20 14l-6 13.5h12L20 14z" fill="currentColor" opacity="0.4"/>
-            <rect x="8" y="33" width="24" height="2" rx="1" fill="currentColor" opacity="0.2"/>
+            <!-- Hull / Ark shape -->
+            <path d="M8 28C8 28 13 22 20 22C27 22 32 28 32 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M11 31C11 31 14 27 20 27C26 27 29 31 29 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+            <!-- Sail / Upward arrow -->
+            <path d="M20 6L13 21h14L20 6z" fill="currentColor" opacity="0.85"/>
+            <!-- Arrow tip accent in gold -->
+            <path d="M20 6L16.5 13h7L20 6z" fill="var(--color-gold, #b8860b)" opacity="0.9"/>
+            <!-- Mast line -->
+            <path d="M20 6V24" stroke="currentColor" stroke-width="1.2" opacity="0.3"/>
           </svg>
-          <span class="footer__brand-name">Easy-Ark Invest</span>
+          <span class="footer__brand-name">Easy-Ark Invest <span style="font-weight:400;opacity:0.7;">易舟投資</span></span>
         </a>
         <p class="footer__brand-desc">Licensed by the Securities and Futures Commission of Hong Kong (Type 4 & Type 9). Exclusively serving Professional Investors.</p>
       </div>
@@ -334,6 +377,51 @@
 </footer>
 
 <style>
+
+/* Track Record Grid */
+.track-record-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.track-record-item {
+  background: var(--color-surface);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.track-record-value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: var(--space-1);
+}
+
+.track-record-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-2);
+}
+
+.track-record-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Section images */
+.section-image {
+  width: 100%;
+  object-fit: cover;
+  max-height: 400px;
+}
+
 .about-label {
   font-size: var(--text-xs);
   font-weight: 500;

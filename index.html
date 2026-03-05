@@ -19,9 +19,10 @@
 <link rel="author" href="https://www.perplexity.ai/computer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Easy-Ark Invest — Institutional-Grade Asset Management for Professional Investors</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzFhM2E1YyIvPgo8cGF0aCBkPSJNMTYgNUw5IDE5aDE0TDE2IDV6IiBmaWxsPSIjYjg4NjBiIiBvcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTE2IDVMMTYgMTIiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTMgMTJMMTYgNUwxOSAxMiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+CjxwYXRoIGQ9Ik02IDIyQzYgMjIgMTAgMTggMTYgMThDMjIgMTggMjYgMjIgMjYgMjIiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44Ii8+CjxwYXRoIGQ9Ik04IDI1QzggMjUgMTEgMjIgMTYgMjJDMjEgMjIgMjQgMjUgMjQgMjUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNCIvPgo8L3N2Zz4=">
+<title>Easy-Ark Invest 易舟投資 — Institutional-Grade Asset Management for Professional Investors</title>
 <meta name="description" content="Easy-Ark Invest is an SFC-licensed (Type 4 & Type 9) asset management firm in Hong Kong. We provide institutional-grade investment solutions exclusively for Professional Investors through LPF fund structures, alpha capture, and proprietary research.">
-<meta property="og:title" content="Easy-Ark Invest — Institutional-Grade Asset Management for Professional Investors">
+<meta property="og:title" content="Easy-Ark Invest 易舟投資 — Institutional-Grade Asset Management for Professional Investors">
 <meta property="og:description" content="SFC-licensed asset management firm providing alpha capture, LPF fund structures, and proprietary research for Professional Investors in Hong Kong.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,11 +39,17 @@
   <div class="header__inner">
     <a href="./index.html" class="header__logo" aria-label="Easy-Ark Invest Home">
       <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <path d="M20 4L6 32h4l10-22 10 22h4L20 4z" fill="currentColor" opacity="0.9"/>
-        <path d="M20 14l-6 13.5h12L20 14z" fill="currentColor" opacity="0.4"/>
-        <rect x="8" y="33" width="24" height="2" rx="1" fill="currentColor" opacity="0.2"/>
+        <!-- Hull / Ark shape -->
+        <path d="M8 28C8 28 13 22 20 22C27 22 32 28 32 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M11 31C11 31 14 27 20 27C26 27 29 31 29 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+        <!-- Sail / Upward arrow -->
+        <path d="M20 6L13 21h14L20 6z" fill="currentColor" opacity="0.85"/>
+        <!-- Arrow tip accent in gold -->
+        <path d="M20 6L16.5 13h7L20 6z" fill="var(--color-gold, #b8860b)" opacity="0.9"/>
+        <!-- Mast line -->
+        <path d="M20 6V24" stroke="currentColor" stroke-width="1.2" opacity="0.3"/>
       </svg>
-      <span class="header__logo-text">Easy-Ark Invest</span>
+      <span class="header__logo-text">Easy-Ark Invest <span style="font-weight:400;opacity:0.7;">易舟投資</span></span>
     </a>
 
     <div class="header__actions" style="display:flex;align-items:center;gap:var(--space-2);">
@@ -69,12 +76,13 @@
   <!-- HERO SECTION -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero__bg">
+      <img src="./images/hero-hk-skyline.jpg" alt="Hong Kong skyline at dusk" class="hero__img" loading="eager">
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content container">
       <div class="hero__text">
         <div class="hero__overline">SFC Licensed · Type 4 &amp; Type 9 · Professional Investors Only</div>
-        <h1 id="hero-heading" class="hero__title">Institutional-Grade Asset Management for Professional Investors</h1>
+        <h1 id="hero-heading" class="hero__title">Institutional-Grade Asset Management<br><span style="font-size:0.55em;font-weight:400;opacity:0.8;letter-spacing:0.05em;">Easy-Ark Invest 易舟投資</span></h1>
         <p class="hero__desc">Easy-Ark Invest is an SFC-licensed asset management firm operating Limited Partnership Fund structures, generating alpha through proprietary research and systematic idea generation — exclusively for Professional Investors.</p>
         <div class="hero__actions">
           <a href="./services.html" class="btn hero-btn-primary">Our Services</a>
@@ -149,6 +157,50 @@
     </div>
   </section>
 
+
+  <!-- PERFORMANCE HIGHLIGHTS -->
+  <section class="section" style="background: var(--color-surface-offset);" aria-labelledby="performance-heading">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: clamp(var(--space-8), 5vw, var(--space-12));">
+        <div class="gold-accent" style="margin-inline: auto; margin-bottom: var(--space-4);"></div>
+        <h2 id="performance-heading" style="font-size: var(--text-lg); font-weight: 600;">Performance Highlights</h2>
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3); line-height: 1.7; max-width: 55ch; margin-inline: auto;">Key metrics and parameters of our fund strategies.</p>
+      </div>
+      <div class="perf-grid reveal">
+        <div class="perf-card">
+          <div class="perf-card__value">2024</div>
+          <div class="perf-card__label">Fund Inception</div>
+          <div class="perf-card__desc">Established to capture alpha across multiple strategies</div>
+        </div>
+        <div class="perf-card">
+          <div class="perf-card__value">Multi-Strategy</div>
+          <div class="perf-card__label">Strategy</div>
+          <div class="perf-card__desc">Long/Short Equity, Derivatives, Macro</div>
+        </div>
+        <div class="perf-card">
+          <div class="perf-card__value">15–25%</div>
+          <div class="perf-card__label">Target Annual Return (Net)</div>
+          <div class="perf-card__desc">Performance objective across market cycles</div>
+        </div>
+        <div class="perf-card">
+          <div class="perf-card__value">&lt; 10%</div>
+          <div class="perf-card__label">Max Drawdown Target</div>
+          <div class="perf-card__desc">Rigorous risk framework with defined limits</div>
+        </div>
+        <div class="perf-card">
+          <div class="perf-card__value">PI Qualified</div>
+          <div class="perf-card__label">Minimum Investment</div>
+          <div class="perf-card__desc">Professional Investor status required</div>
+        </div>
+        <div class="perf-card">
+          <div class="perf-card__value">HK LPF</div>
+          <div class="perf-card__label">Fund Structure</div>
+          <div class="perf-card__desc">Hong Kong Limited Partnership Fund vehicle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PLATFORM HIGHLIGHTS -->
   <section class="section" style="background: var(--color-surface);" aria-labelledby="highlights-heading">
     <div class="container">
@@ -207,11 +259,17 @@
       <div class="footer__brand">
         <a href="./index.html" class="footer__brand-logo" aria-label="Easy-Ark Invest Home">
           <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M20 4L6 32h4l10-22 10 22h4L20 4z" fill="currentColor" opacity="0.9"/>
-            <path d="M20 14l-6 13.5h12L20 14z" fill="currentColor" opacity="0.4"/>
-            <rect x="8" y="33" width="24" height="2" rx="1" fill="currentColor" opacity="0.2"/>
+            <!-- Hull / Ark shape -->
+            <path d="M8 28C8 28 13 22 20 22C27 22 32 28 32 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M11 31C11 31 14 27 20 27C26 27 29 31 29 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+            <!-- Sail / Upward arrow -->
+            <path d="M20 6L13 21h14L20 6z" fill="currentColor" opacity="0.85"/>
+            <!-- Arrow tip accent in gold -->
+            <path d="M20 6L16.5 13h7L20 6z" fill="var(--color-gold, #b8860b)" opacity="0.9"/>
+            <!-- Mast line -->
+            <path d="M20 6V24" stroke="currentColor" stroke-width="1.2" opacity="0.3"/>
           </svg>
-          <span class="footer__brand-name">Easy-Ark Invest</span>
+          <span class="footer__brand-name">Easy-Ark Invest <span style="font-weight:400;opacity:0.7;">易舟投資</span></span>
         </a>
         <p class="footer__brand-desc">Licensed by the Securities and Futures Commission of Hong Kong (Type 4 & Type 9). Exclusively serving Professional Investors.</p>
       </div>
@@ -242,6 +300,50 @@
 </footer>
 
 <style>
+
+/* Performance Highlights Grid */
+.perf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.perf-card {
+  background: var(--color-surface);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+  transition: box-shadow var(--transition-interactive), border-color var(--transition-interactive);
+}
+
+.perf-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: oklch(from var(--color-text) l c h / 0.12);
+}
+
+.perf-card__value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: var(--space-1);
+}
+
+.perf-card__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-2);
+}
+
+.perf-card__desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
 /* Hero section */
 .hero {
   position: relative;
@@ -260,6 +362,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 40%;
 }
 
 .hero__overlay {
@@ -267,10 +370,10 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    #0d1f33 0%,
-    #1a3a5c 35%,
-    #1e4a6e 65%,
-    #142e4a 100%
+    rgba(13, 31, 51, 0.88) 0%,
+    rgba(26, 58, 92, 0.78) 35%,
+    rgba(30, 74, 110, 0.72) 65%,
+    rgba(20, 46, 74, 0.85) 100%
   );
 }
 
