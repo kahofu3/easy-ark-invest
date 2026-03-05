@@ -1,20 +1,16 @@
 name: Reconstruct Hero Image
-
 on:
   push:
     branches: [main]
     paths:
-      - 'assets/chunks/chunk_10.txt'
-
+      - 'assets/chunks/chunk_14.txt'
 jobs:
   reconstruct:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
       - name: Reconstruct image from chunks
         run: |
           cat assets/chunks/chunk_00.txt \
@@ -27,19 +23,20 @@ jobs:
               assets/chunks/chunk_07.txt \
               assets/chunks/chunk_08.txt \
               assets/chunks/chunk_09.txt \
-              assets/chunks/chunk_10.txt > /tmp/combined.b64
+              assets/chunks/chunk_10.txt \
+              assets/chunks/chunk_11.txt \
+              assets/chunks/chunk_12.txt \
+              assets/chunks/chunk_13.txt \
+              assets/chunks/chunk_14.txt > /tmp/combined.b64
           base64 -d /tmp/combined.b64 > assets/hero-bg.jpg
-          echo "Image size: $(wc -c < assets/hero-bg.jpg) bytes"
-
+          echo "Decoded image size: $(wc -c < assets/hero-bg.jpg) bytes"
       - name: Remove chunk files
-        run: |
-          rm -f assets/chunks/chunk_0*.txt assets/chunks/chunk_1*.txt
-
+        run: rm -rf assets/chunks/
       - name: Commit and push reconstructed image
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git add assets/hero-bg.jpg
-          git rm --cached assets/chunks/ -r --ignore-unmatch || true
+          git rm -r --cached assets/chunks/ --ignore-unmatch || true
           git commit -m "Reconstruct hero-bg.jpg from base64 chunks"
           git push
