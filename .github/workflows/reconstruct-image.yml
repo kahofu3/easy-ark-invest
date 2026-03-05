@@ -1,0 +1,33 @@
+name: Reconstruct Hero Image
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/chunks/chunk_*.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Reconstruct image from chunks
+        run: |
+          cat assets/chunks/chunk_0.txt assets/chunks/chunk_1.txt assets/chunks/chunk_2.txt assets/chunks/chunk_3.txt assets/chunks/chunk_4.txt > /tmp/image_b64.txt
+          base64 -d /tmp/image_b64.txt > assets/hero-bg.jpg
+          echo "Reconstructed size: $(wc -c < assets/hero-bg.jpg) bytes"
+          
+      - name: Remove chunks and commit
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          rm -rf assets/chunks/
+          git add assets/hero-bg.jpg
+          git rm -rf --cached assets/chunks/ 2>/dev/null || true
+          git add -A
+          git commit -m "Reconstruct hero background image from chunks"
+          git push
