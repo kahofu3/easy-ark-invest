@@ -13,6 +13,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Reconstruct image from chunks
         run: |
+          # Decode chunk_07_partB from hex
+          cat assets/chunks/chunk_07_partB_hex.txt | xxd -r -p > /tmp/chunk_07_partB.txt
+          # Concatenate all chunks
           cat assets/chunks/chunk_00.txt \
               assets/chunks/chunk_01.txt \
               assets/chunks/chunk_02.txt \
@@ -20,8 +23,9 @@ jobs:
               assets/chunks/chunk_04.txt \
               assets/chunks/chunk_05.txt \
               assets/chunks/chunk_06.txt \
-              assets/chunks/chunk_07a.txt \
-              assets/chunks/chunk_07b.txt \
+              assets/chunks/chunk_07_partA.txt \
+              /tmp/chunk_07_partB.txt \
+              assets/chunks/chunk_07_partC.txt \
               assets/chunks/chunk_08.txt \
               assets/chunks/chunk_09.txt \
               assets/chunks/chunk_10.txt \
